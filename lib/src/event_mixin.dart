@@ -1,5 +1,7 @@
 import 'dart:async';
 
+import 'package:flutter/material.dart';
+
 /// To make sure the events passed are valid. any event must be extended from EventBase.
 abstract class EventBase {}
 
@@ -10,10 +12,12 @@ mixin EventMixin {
   Stream<EventBase> get events => _controller.stream;
 
   /// pass event to UI code.
-  void putEvent(EventBase event) {
+  @protected
+  void sendEvent(EventBase event) {
     _controller.sink.add(event);
   }
 
+  @protected
   void eventDispose() {
     _controller.close();
   }

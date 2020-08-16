@@ -49,11 +49,11 @@ class ST extends StateNotifier<int> with EventMixin {
 
   void increA() async {
     state++;
-    putEvent(LoadingEvent());
+    sendEvent(LoadingEvent());
     await Future.delayed(Duration(seconds: 1));
-    putEvent(DismisDialogEvent());
+    sendEvent(DismisDialogEvent());
     state++;
-    putEvent(ShowSnackbarEvent(content: 'content'));
+    sendEvent(ShowSnackbarEvent(content: 'content'));
   }
 }
 

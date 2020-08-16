@@ -1,8 +1,10 @@
 name: event_mixin
-description: A new Flutter project.
-version: 0.0.1
+description: flutter_stream_listener with a small customization makes the code logic can easily send events to the UI code.
+version: 0.1.0
 author: tbm98 <tbm98.dev@gmail.com>
-homepage:
+homepage: https://github.com/tbm98/event_mixin
+repository: https://github.com/tbm98/event_mixin
+issue_tracker: https://github.com/tbm98/event_mixin/issues
 
 environment:
   sdk: ">=2.7.0 <3.0.0"
